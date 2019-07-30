@@ -1,0 +1,56 @@
+.toggle-menu {
+  position: relative;
+  float: right;
+  // margin-right: 15px;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  span {
+    background-color: black;
+    display: block;
+    width: 22px;
+    height: 1px;
+    border-radius: 1px;
+    margin: 5px auto;
+  }
+}
+button:disabled,
+button[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.btn {
+  display: inline-block;
+font-weight: 400;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+user-select: none;
+border: 1px solid transparent;
+padding: .375rem .75rem;
+font-size: 1rem;
+line-height: 1.5;
+border-radius: .25rem;
+transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+}
+.btn-black {
+  -webkit-background-clip: padding-box;
+  background-color:$primary;
+  border: 1px solid $secondary;
+  color: white;
+  display: inline-block;
+  // padding:15px;
+  text-decoration: none;
+  text-shadow: $secondary;
+  font-size: 12pt;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}

@@ -1,0 +1,36 @@
+<div class="list-sales">
+  <h2 class="text-center section-title">Extrato de transações</h2>
+    <div class="row grid-title">
+      <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
+      <div class="col-sm-5 col-md-5 col-lg-5 col-xl-5">
+        <p class="text-left title">Mercadoria</p>
+      </div>
+      <div class="col-sm-5 col-md-5 col-lg-5 col-xl-5">
+        <p class="text-right title">Valor</p>
+      </div>
+    </div>
+
+    <div class="row" *ngFor="let order of orders">
+      <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1">
+        <p class="text-center subtitle"><span>{{ order.typeTransacion == 'venda'? '+' : '-' }}</span></p>
+      </div>
+      <div class="col-sm-5 col-md-5 col-lg-5 col-xl-5">
+        <p class="text-left subtitle">{{order.name}}</p>
+      </div>
+      <div class="col-sm-5 col-md-5 col-lg-5 col-xl-5">
+        <p class="text-right subtitle">{{ order.price | currency:'BRL':true:'1.2-2' }}</p>
+      </div>
+    </div>
+
+    <div class="row total-row">
+      <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
+      <div class="col-sm-5 col-md-5 col-lg-5 col-xl-5">
+        <p class="text-left title total">Total</p>
+      </div>
+      <div class="col-sm-5 col-md-5 col-lg-5 col-xl-5">
+        <p class="text-right title">{{ total() | currency:'BRL':true:'1.2-2' }}</p>
+        <p class="text-right title">{{ total() > 0 ?'[LUCRO]': '[PREJUIZO]' }}</p>
+      </div>
+    </div>
+
+</div>

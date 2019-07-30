@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'scss/_variables';
+@import 'scss/font';
+@import 'scss/_grid';
+@import 'scss/_buttons';
+@import 'scss/components/header';
+@import 'scss/components/menu';
+@import 'scss/components/new-sale';

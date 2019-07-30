@@ -1,0 +1,32 @@
+// colors
+$primary:#333333;
+$secondary: #888888;
+$brand:#E0E0E0;
+$link-hover: #C4C4C4;
+
+$grid-gutter: 1%;
+$grid-columns: 12;
+$grid-max: 980px;
+
+$grid-columns:      12;
+$grid-gutter-width: 15px;
+
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 544px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1200px
+);
+
+$breakpoints: (
+  sm: 576px,
+  md: 720px,
+  lg: 940px,
+  xl: 1140px
+);

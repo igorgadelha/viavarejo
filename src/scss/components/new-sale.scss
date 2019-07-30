@@ -1,0 +1,67 @@
+.section-title {
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+}
+
+form {
+  [class*="col-"]{
+    margin-bottom: 0;
+  }
+  .form-group {
+    // display: block;
+    // width: 100%;
+    label {
+      display: block;
+      width: 100%;
+      padding: 10px 0px;
+    }
+    select, input {
+      display: block;
+      width: 100%;
+      font-size: 12pt;
+      color: $link-hover;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid $secondary;
+      background-color: transparent;
+      min-height: 32px;
+    }
+  }
+}
+.mt {
+  margin-top: 15px;
+}
+
+@media screen and (max-width: map-get($breakpoints, 'sm' )) {
+  form {
+    h2 {
+      display: none;
+    }
+  }
+}
+@media screen and (min-width: map-get($breakpoints, 'md' )) {
+  form {
+    border: 1px solid $link-hover;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 15px;
+    h2 {
+      display: block;
+    }
+    select, input {
+      min-height: 32px;
+    }
+    button {
+      float: right;
+      max-width: 200px;
+    }
+  }
+}
+@media screen and (min-width: map-get($breakpoints, 'xl' )) {
+  form {
+    select, input {
+      height: 32px;
+    }
+  }
+}

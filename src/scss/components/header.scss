@@ -1,0 +1,64 @@
+header {
+  background-color: $brand;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+  svg.logo {
+    width: 32px;
+    height: 32px;
+  }
+}
+.nav-brand {
+  display: inline-block;
+  padding-top: .3125rem;
+  padding-bottom: .3125rem;
+  // margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+  text-decoration: none;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #333333;
+
+}
+@media screen and (max-width: map-get($breakpoints, 'lg' )) {
+  header {
+    .nav-brand {
+      left: calc(50% - 411px/2);
+      top: calc(50% - 43px/2 + 0.5px);
+    }
+  }
+}
+@media screen and (min-width: map-get($breakpoints, 'lg' )) {
+  header {
+    // display: block;
+    .container {
+      width: 100%;
+      display: block;
+    }
+    svg.logo {
+      width: 40px;
+      height: 40px;
+      float: left;
+      // margin: 5px;
+    }
+    .nav-brand {
+      top: 0;
+      display: block;
+      max-width: 400px;
+      float: left;
+      padding: 15px;
+    }
+  }
+}
+@media screen and (min-width: map-get($breakpoints, 'xl' )) {
+  header {
+  }
+}

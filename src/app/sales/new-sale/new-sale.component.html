@@ -1,0 +1,34 @@
+<form [formGroup]="form" class="row" (ngSubmit)="onSubmit()">
+  <h2 class="text-center section-title">Nova Transação</h2>
+  <div  class="form-group col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    <label for="">Tipo de Compra</label>
+    <select formControlName='typeTransacion'>
+      <option value="compra">Compra</option>
+      <option value="venda">Venda</option>
+    </select>
+    <span style="color:red" *ngIf="form.get('typeTransacion').hasError('required')">
+      Você deve adicionar selecionar uma transação.
+    </span>
+  </div>
+  
+  <div class="form-group col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    <label for="">Nome da Mercadoria</label>
+    <input type="text" formControlName='name' placeholder="Input">
+    <span style="color:red" *ngIf="form.get('name').hasError('required')">
+      Você deve adicionar um nome a mercadoria.
+    </span>
+  </div>
+  <div class="form-group col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    <label for="">Valor</label>
+    <input type="number" formControlName='price' step="any" pattern="[0-9]+([\.,][0-9]+)?" placeholder="R$ 0,00">
+    <span style="color:red" *ngIf="form.get('price').hasError('required')">
+        Você deve adicionar um preço a mercadoria.
+    </span>
+    <span style="color:red" *ngIf="form.get('price').hasError('pattern')">
+        Apenas números são permitidos.
+    </span>
+  </div>
+  <div class="form-group col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    <button type="submit" name="button" class="btn btn-black btn-block mt" [disabled]='!this.form.valid'>Adicionar Transação</button>
+  </div>
+</form>
